@@ -1,6 +1,6 @@
-const { createApp, ref } = Vue;
+const { createApp, ref, computed } = Vue;
 
-const quotes = [
+const baseQuotes = [
   {
     quote:
       "The night is darkest just before the dawn. And I promise you, the dawn is coming.",
@@ -33,12 +33,20 @@ const quotes = [
 const app = createApp({
   setup() {
     const showAuthor = ref(true);
+    const quotes = ref(baseQuotes);
+    const totalQuotes = computed(() => {
+      return quotes.value.length;
+    });
 
     const toggleAuthor = () => {
       showAuthor.value = !showAuthor.value;
     };
 
-    return { quotes, showAuthor, toggleAuthor };
+    const addQuote = () => {
+      quotes.value.unshift({ quote: "Hello World !!", author: "John Doe" });
+    };
+
+    return { quotes, totalQuotes, showAuthor, toggleAuthor, addQuote };
   },
 });
 

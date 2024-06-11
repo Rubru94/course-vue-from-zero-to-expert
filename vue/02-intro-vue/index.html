@@ -7,23 +7,25 @@
   </head>
   <body>
     <div id="myApp">
-      <h3>Batman quotes</h3>
+      <!-- <h3>Batman quotes ({{quotes.length}})</h3> -->
+      <h3>Batman quotes ({{totalQuotes}})</h3>
       <!-- <button v-on:click="toggleAuthor">
         {{showAuthor ? 'Hide' : 'Show'}} author
       </button> -->
+
+      <p>
+        <input
+          type="text"
+          placeholder="Add quote"
+          @keypress.enter="addQuote()"
+        />
+        <button @click="addQuote">Add quote</button>
+      </p>
       <button @click="toggleAuthor">
         {{showAuthor ? 'Hide' : 'Show'}} author
       </button>
-      <!-- same result -->
-      <!-- <button @click="showAuthor = !showAuthor">
-        {{showAuthor ? 'Hide' : 'Show'}} author
-      </button> -->
 
       <hr />
-
-      <!-- <ul>
-        <li v-for="quote in quotes">{{quote.author}}</li>
-      </ul> -->
 
       <ul>
         <li v-for="({quote, author}, index) in quotes">
