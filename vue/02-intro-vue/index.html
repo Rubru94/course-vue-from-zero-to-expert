@@ -8,6 +8,17 @@
   <body>
     <div id="myApp">
       <h3>Batman quotes</h3>
+      <!-- <button v-on:click="toggleAuthor">
+        {{showAuthor ? 'Hide' : 'Show'}} author
+      </button> -->
+      <button @click="toggleAuthor">
+        {{showAuthor ? 'Hide' : 'Show'}} author
+      </button>
+      <!-- same result -->
+      <!-- <button @click="showAuthor = !showAuthor">
+        {{showAuthor ? 'Hide' : 'Show'}} author
+      </button> -->
+
       <hr />
 
       <!-- <ul>
@@ -17,7 +28,9 @@
       <ul>
         <li v-for="({quote, author}, index) in quotes">
           <span>{{index + 1}} - {{quote}}</span>
-          <blockquote>{{author}}</blockquote>
+          <blockquote v-if="showAuthor">{{author}}</blockquote>
+          <!--  <blockquote v-show="showAuthor">{{author}}</blockquote> -->
+          <!-- v-show -- Element always exist. Only changes property display -->
         </li>
       </ul>
     </div>
