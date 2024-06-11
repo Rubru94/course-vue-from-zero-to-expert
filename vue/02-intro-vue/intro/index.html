@@ -6,20 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+    <div>Hello world !!!</div>
     <div id="myApp">
-      <h3>Batman quotes</h3>
-      <hr />
+      <h3>{{messageReactive}}</h3>
+      <blockquote>{{author}}</blockquote>
 
-      <!-- <ul>
-        <li v-for="quote in quotes">{{quote.author}}</li>
-      </ul> -->
-
-      <ul>
-        <li v-for="({quote, author}, index) in quotes">
-          <span>{{index + 1}} - {{quote}}</span>
-          <blockquote>{{author}}</blockquote>
-        </li>
-      </ul>
+      <button v-on:click="changeMessage">Change message</button>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
