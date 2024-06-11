@@ -17,7 +17,8 @@
         <input
           type="text"
           placeholder="Add quote"
-          @keypress.enter="addQuote()"
+          @keypress.enter="addQuote"
+          v-model="newMessage"
         />
         <button @click="addQuote">Add quote</button>
       </p>
