@@ -9,3 +9,5 @@
 - [Vue cheat-sheet](Vue-cheat-sheet.pdf)
 
 - [SFC Single-File Component - Syntax Specification](https://vuejs.org/api/sfc-spec.html#sfc-syntax-specification)
+
+- [Script setup](https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits)
