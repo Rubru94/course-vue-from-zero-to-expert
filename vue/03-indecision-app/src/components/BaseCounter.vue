@@ -13,11 +13,11 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
 
-const props = defineProps({
-  // value: Number // not required
-  value: { type: Number, required: true }
-});
+interface Props {
+  value?: number;
+}
+const props = defineProps<Props>();
 
-const counter = ref(props.value);
+const counter = ref(props.value ?? 10); // if value is not required we should handle possible undefined
 const squareCounter = computed(() => Math.pow(counter.value, 2));
 </script>
