@@ -2,6 +2,8 @@
   <h1>Vue app</h1>
   <hr />
 
+  <h1 className="text-3xl font-bold underline">Hello world!</h1>
+
   <!-- : equal to write v-bind -->
   <BaseCounter :value="5" />
   <BaseCounterScript :value="5" />

@@ -5,8 +5,8 @@
     <h3>Square: {{ squareCounter }}</h3>
 
     <div>
-      <button @click="counter++">+1</button>
-      <button @click="counter--">-1</button>
+      <button class="btn" @click="counter++">+1</button>
+      <button class="btn" @click="counter--">-1</button>
     </div>
   </section>
   <hr />
@@ -23,3 +23,9 @@ const props = defineProps<Props>();
 const counter = ref(props.value ?? 10); // if value is not required we should handle possible undefined
 const squareCounter = computed(() => Math.pow(counter.value, 2));
 </script>
+
+<style scoped>
+.btn {
+  @apply p-5 mr-2 bg-blue-500 rounded hover:bg-blue-600;
+}
+</style>
