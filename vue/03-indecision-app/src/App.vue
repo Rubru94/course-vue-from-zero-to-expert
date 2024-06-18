@@ -5,7 +5,7 @@
   <h1 className="text-3xl font-bold underline">Hello world!</h1>
 
   <!-- : equal to write v-bind -->
-  <BaseCounter :value="5" />
+  <BaseCounter :value="7" />
   <BaseCounterScript :value="5" />
   <BaseCounterScriptFancy :value="5" />
 </template>

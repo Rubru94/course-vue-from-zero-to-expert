@@ -13,15 +13,14 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
+import { useCounter } from '../composables/useCounter';
 
 interface Props {
   value?: number;
 }
 const props = defineProps<Props>();
 
-const counter = ref(props.value ?? 10); // if value is not required we should handle possible undefined
-const squareCounter = computed(() => Math.pow(counter.value, 2));
+const { counter, squareCounter } = useCounter(props.value);
 </script>
 
 <style scoped>
