@@ -26,6 +26,6 @@ const squareCounter = computed(() => Math.pow(counter.value, 2));
 
 <style scoped>
 .btn {
-  @apply p-5 mr-2 bg-blue-500 rounded hover:bg-blue-600;
+  @apply p-2 mr-2 bg-blue-500 rounded hover:bg-blue-600;
 }
 </style>
