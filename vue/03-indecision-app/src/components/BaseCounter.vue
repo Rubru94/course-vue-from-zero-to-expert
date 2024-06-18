@@ -1,4 +1,5 @@
 <template>
+  <h2>BaseCounter</h2>
   <section>
     <h3>Counter: {{ counter }}</h3>
     <h3>Square: {{ squareCounter }}</h3>
@@ -8,6 +9,7 @@
       <button @click="counter--">-1</button>
     </div>
   </section>
+  <hr />
 </template>
 
 <script lang="ts" setup>

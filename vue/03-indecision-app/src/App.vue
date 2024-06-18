@@ -4,10 +4,12 @@
 
   <!-- : equal to write v-bind -->
   <BaseCounter :value="5" />
+  <BaseCounterScript :value="5" />
 </template>
 
 <script lang="ts" setup>
 import BaseCounter from './components/BaseCounter.vue';
+import BaseCounterScript from './components/BaseCounterScript.vue';
 </script>
 
 <style scoped>
