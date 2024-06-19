@@ -5,7 +5,7 @@
     </div>
 
     <ChatMessages :messages="messages" />
-    <MessageBox />
+    <MessageBox @send-message="onMessage($event)" />
   </div>
 </template>
 
@@ -25,8 +25,16 @@ const messages = ref<ChatMessage[]>([
   {
     id: uuidv4(),
     text: 'ok',
-    isOwn: false,
-    image: 'https://yesno.wtf/assets/yes/12-e4f57c8f172c51fdd983c2837349f853.gif'
+    isOwn: false
+    // image: 'https://yesno.wtf/assets/yes/12-e4f57c8f172c51fdd983c2837349f853.gif'
   }
 ]);
+
+const onMessage = (text: string) => {
+  messages.value.push({
+    id: uuidv4(),
+    text,
+    isOwn: true
+  });
+};
 </script>
