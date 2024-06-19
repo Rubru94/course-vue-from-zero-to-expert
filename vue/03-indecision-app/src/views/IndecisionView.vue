@@ -12,29 +12,7 @@
 <script setup lang="ts">
 import ChatMessages from '@/components/chat/ChatMessages.vue';
 import MessageBox from '@/components/chat/MessageBox.vue';
-import type { ChatMessage } from '@/interfaces/chat-message.interface';
-import { ref } from 'vue';
-import { v4 as uuidv4 } from 'uuid';
+import { useChat } from '@/composables/useChat';
 
-const messages = ref<ChatMessage[]>([
-  {
-    id: uuidv4(),
-    text: 'Hello world !!!',
-    isOwn: true
-  },
-  {
-    id: uuidv4(),
-    text: 'ok',
-    isOwn: false
-    // image: 'https://yesno.wtf/assets/yes/12-e4f57c8f172c51fdd983c2837349f853.gif'
-  }
-]);
-
-const onMessage = (text: string) => {
-  messages.value.push({
-    id: uuidv4(),
-    text,
-    isOwn: true
-  });
-};
+const { messages, onMessage } = useChat();
 </script>
