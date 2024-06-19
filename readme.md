@@ -2,7 +2,9 @@
 
 ## 03-indecision-app
 
-- [netlify deployed app](https://zingy-cheesecake-fd7402.netlify.app/)
+- [netlify deployed base app](https://zingy-cheesecake-fd7402.netlify.app/)
+
+- [Indecision view template](https://gist.github.com/Klerith/ab86e5881b33461632d1b72a0e970b95)
 
 ## Bibliography
 
