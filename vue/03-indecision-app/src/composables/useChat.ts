@@ -5,7 +5,13 @@ import type { YesNoResponse } from '@/interfaces/yes-no-response';
 import { sleep } from '@/helpers/sleep';
 
 export const useChat = () => {
-  const messages = ref<ChatMessage[]>([]);
+  const messages = ref<ChatMessage[]>([
+    {
+      id: uuidv4(),
+      text: 'Ask me something...',
+      isOwn: false
+    }
+  ]);
 
   const getApiResponse = async (): Promise<YesNoResponse> => {
     const resp = await fetch('https://yesno.wtf/api');
