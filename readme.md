@@ -22,6 +22,10 @@
 
 - [Script setup](https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits)
 
+### Testing
+
+- [Vitest](https://vitest.dev/guide/)
+
 ### Deployment
 
 - [netlify](https://www.netlify.com/)
